@@ -1,0 +1,16 @@
+let ingredientes = [        //array
+    {                       //objeto
+        nome: 'Alface',        
+        valor: 2.5
+    },
+    {
+        nome: 'Tomate',
+        valor: 3.5 
+    },
+    {
+        nome: 'Batata palha',
+        valor: 2 
+    }
+]
+
+export default ingredientes; //somente o vetor
