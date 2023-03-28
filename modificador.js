@@ -1,50 +1,42 @@
+//capitalizar títulos?
 function fnCapitalizarNovo(colecao, atributo) {     //coleção é o arquivo em que está o atributo; atributo é o atributo do obj.
-    if(typeof colecao[0] == 'object') {
-        let resultado = colecao.map(function(obj){  //irá percorrer todas as posições do array ingredientes e fazer 
-            let letraInicial = obj[atributo].charAt(0).toUpperCase();
-            let restoTexto = obj[atributo].slice(1);  //cortar a partir do segundo caractere (incluindo ele mesmo)
-
-            obj[atributo] = letraInicial + restoTexto;  //"atributo" já é o nome dos ingredientes
-
-            return obj;
-        });
-
-        console.log(resultado);
-    }
-    /*else {
-        if (typeof colecao[0] == 'string) {
-            let resultado = colecao.map(function(obj){
-                let 
-            })
-
-
-
+    if (colecao.length > 0) {
+        if(typeof colecao[0] == 'object') {
+            colecao.map(item => item[atributo] = item[atributo].charAt(0).toUpperCase() + item[atributo].slice(1));
+        } else {
+            colecao.map(item => item = item.charAt(0).toUpperCase() + item.slice(1));
         }
-    }*/
-}
-//este precisa ficar se a captalização já é feita no de cima?
-function fnCapitalizar(vetor) {
-    let modificado = [];
-
-    let letraInicial = vetor[i].charAt(0).toUpperCase();
-    let restoTexto = vetor[i].slice(1);  //cortar a partir do segundo caractere (incluindo ele mesmo)
-    let resultado = letraInicial + restoTexto;
-    
-    for (let i = 0; i < vetor.length; i++) {
-
-        modificado[i] = resultado
+        return colecao;
     }
-    return modificado;
 }
 
-function fnOrdenar(vetor) {
-    return vetor.sort(function(a,b) {              //função dentro do sort (quem são a e b?)
-        return a.localeCompare(b);                                //fará a ordenação de acordo com os caracteres locais (os nossos incluem letras com acentos, isso será levado em consideração)
-    });
+//capitalizar títulos?
+function fnCaixaAlta(colecao, atributo) {
+    if (colecao.length > 0) {
+        if (typeof colecao[0] == 'object' && atributo) {
+            colecao.map(item => item[atributo] = item[atributo].toUpperCase());
+        } else {
+            colecao.map(item => item = item.toUpperCase());
+        }
+        return colecao;
+    }
+}
+//ingredientes em ordem alfabética
+function fnOrdenar(colecao, atributo) {
+    return atributo ?
+        colecao.sort(function(a, b){
+            return typeof a[atributo] == 'number' ?
+                a[atributo] - b[atributo] : a[atributo].localeCompare(b[atributo])
+        }):
+        colecao.sort(function(a, b){
+            return typeof a == 'number' ?
+                a - b:
+                a.localeCompare(b)
+        });
 }
 
 export default {    //objeto que retornará as funções que ele liga ao outro arquivo .js
-    capitalizar: fnCapitalizar,         //funcionalidade e a função
     capitalizarNovo: fnCapitalizarNovo,         //funcionalidade e a função
-    ordenar: fnOrdenar  
+    ordenar: fnOrdenar,
+    caixaAlta: fnCaixaAlta  
 };
