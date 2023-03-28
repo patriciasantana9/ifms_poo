@@ -3,6 +3,7 @@ import ingredientes from  "./ingredientes.js";
 //import saladas from  "./saladas.js";
 
 let ingredientesOrdenados = modificador.ordenar(ingredientes, 'nome');
+//let ingredientesCap = modificador.ordenar(ingredientesOrdenados);
 let containerIngredientes = document.querySelector('#container-ingredientes');
 
 for (let ingrediente of ingredientesOrdenados) {
