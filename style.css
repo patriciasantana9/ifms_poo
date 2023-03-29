@@ -2,24 +2,54 @@
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --cor0: white;
+    --cor1: #6e8c03;
+    --cor2: #f2cb57;
+    --cor3: #F27405;
+    --cor4: #734A32;
+    --cor5: #BF0404;
+
+    --font-titulo: 'Alkatra', cursive;
+    --font-sub: 'Delicious Handrawn', cursive;
+    --font-p: 'Noto Sans Lepcha', sans-serif;
+}
+
 html, body {
-    font-family: sans-serif;
-    background-color: gray;
+    font-family: sans-serif; 
+}
+body {
+    width: 500px;
+    margin: auto;
+    border: solid 1px rgba(0,0,0,0.1);
+    border-radius: 37px;
 }
 h1 {
+    margin: 50px auto;
+    font-family: var(--font-titulo);
     margin: 4rem 0;
     text-transform: uppercase;
     text-align: center;
 }
-.ingrediente {
-    border-bottom: solid 1px rgba(0,0,0,0.1);
+.ingrediente, .salada {
+    box-shadow: 1px 2px 4px 0px #c9c8c84f;
     padding: 2rem;
     align-items: center;
     display: flex;
+    height: 50px;
+    width: 350px;
+    border-radius: 46px 0px;
+    margin: 8px auto;
 }
-.ingrediente img {
+.ingrediente:hover, .salada:hover {
+    background-color: var(--cor2);
+    box-shadow: 1px 2px 4px 0px #8f8f8f91;
+}
+.ingrediente img, .salada img {
     height: 5rem;
 }
-.ingrediente p {
+.ingrediente p, .salada p {
     margin-left: 1rem;
+    font-family: var(--font-p);
 }
