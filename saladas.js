@@ -4,7 +4,7 @@ let saladas = [
         ingredientes: 'alface crespa, cebola roxa, pepino, tomate',
         valor: 5,
         img: 'prato1.png'
-    },
+    }, 
     {
         nome: 'Salada 2',
         ingredientes: 'Alface crespa, croutonn, pepino, tomate',
@@ -42,4 +42,5 @@ let saladas = [
         img: 'prato7.png'
     },
 ]
+
 export default saladas;

@@ -1,12 +1,12 @@
 import modificador from "./modificador.js";
 import ingredientes from  "./ingredientes.js";
-//import saladas from  "./saladas.js";
+import saladas from  "./saladas.js";
 
+//exibir ingredientes
 let ingredientesOrdenados = modificador.ordenar(ingredientes, 'nome');
 let ingredientesCap = modificador.capitalizarNovo(ingredientes, 'nome');
-//let pratosCap = modificador.capitalizarNovo(saladas, 'ingredientes');
-let containerIngredientes = document.querySelector('#container-ingredientes');
 
+let containerIngredientes = document.querySelector('#container-ingredientes');
 for (let ingrediente of ingredientesCap) {
     let textoHTML = `
     <div class="ingrediente">
@@ -14,7 +14,19 @@ for (let ingrediente of ingredientesCap) {
         <p class="nome-ingrediente">${ingrediente.nome}</p>
     </div>
     `;
-
     containerIngredientes.innerHTML += textoHTML;       //+= pra receber TODOS os ingredientes da lista
 }
 
+//exibir saladas
+let saladasCap = modificador.capitalizarNovo(saladas, 'ingredientes');
+
+let containerSaladas = document.querySelector('#container-saladas');
+for (let salada of saladasCap) {
+    let saladaHTML = `
+    <div class="salada">
+        <img src="img/${salada.img}">
+        <p class="ingrediente-salada">${salada.ingredientes}</p>
+    </div>
+    `;
+    containerSaladas.innerHTML += saladaHTML;
+}
