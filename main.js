@@ -18,7 +18,7 @@ for (let ingrediente of ingredientesCap) {
 }
 
 //exibir saladas
-let saladasCap = modificador.capitalizarNovo(saladas, 'ingredientes');
+let saladasCap = modificador.caixaAlta(saladas, 'ingredientes');
 
 let containerSaladas = document.querySelector('#container-saladas');
 for (let salada of saladasCap) {
