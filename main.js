@@ -1,6 +1,6 @@
 import modificador from "./modificador.js";
 import ingredientes from  "./ingredientes.js";
-import saladas from  "./saladas.js";
+//import saladas from  "./saladas.js";
 
 //exibir ingredientes
 let ingredientesOrdenados = modificador.ordenar(ingredientes, 'nome');
@@ -18,9 +18,10 @@ for (let ingrediente of ingredientesCap) {
 }
 
 //exibir saladas
+/*
 let saladasCap = modificador.caixaAlta(saladas, 'ingredientes');
 
-let containerSaladas = document.querySelector('#container-saladas');
+let containerSaladas = document.getElementById('container-saladas');
 for (let salada of saladasCap) {
     let saladaHTML = `
     <div class="salada">
@@ -30,3 +31,4 @@ for (let salada of saladasCap) {
     `;
     containerSaladas.innerHTML += saladaHTML;
 }
+*/

@@ -23,12 +23,10 @@ function fnCaixaAlta(colecao, atributo) {
 }
 //ingredientes em ordem alfabética
 function fnOrdenar(colecao, atributo) {
-    return atributo ?
-        colecao.sort(function(a, b){
+    return atributo ? colecao.sort(function(a, b){
             return typeof a[atributo] == 'number' ?
                 a[atributo] - b[atributo] : a[atributo].localeCompare(b[atributo])
-        }):
-        colecao.sort(function(a, b){
+        }) : colecao.sort(function(a, b){
             return typeof a == 'number' ?
                 a - b:
                 a.localeCompare(b)
