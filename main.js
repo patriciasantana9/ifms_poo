@@ -4,6 +4,7 @@ import ingredientes from  "./ingredientes.js";
 
 let ingredientesOrdenados = modificador.ordenar(ingredientes, 'nome');
 let ingredientesCap = modificador.capitalizarNovo(ingredientes, 'nome');
+//let pratosCap = modificador.capitalizarNovo(saladas, 'ingredientes');
 let containerIngredientes = document.querySelector('#container-ingredientes');
 
 for (let ingrediente of ingredientesCap) {
@@ -16,3 +17,4 @@ for (let ingrediente of ingredientesCap) {
 
     containerIngredientes.innerHTML += textoHTML;       //+= pra receber TODOS os ingredientes da lista
 }
+
