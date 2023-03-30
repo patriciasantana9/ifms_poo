@@ -53,3 +53,21 @@ h1 {
     margin-left: 1rem;
     font-family: var(--font-p);
 }
+
+/* página inicial */
+main {
+    height: 800px;
+    width: 350px;
+    margin: 8px auto;
+    text-align: justify;
+}
+p {
+    font-family: var(--font-p);
+    font-size: 1em;
+    margin-bottom: 1rem;
+}
+
+p::first-letter {
+    font-size: 1.2em;
+    /* background-color: var(--cor1); */
+}
