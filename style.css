@@ -1,4 +1,4 @@
-* { 
+* {
     margin: 0;
     padding: 0;
 }
@@ -10,18 +10,19 @@
     --cor3: #F27405;
     --cor4: #734A32;
     --cor5: #BF0404;
-    
+    --cor6: black;
+
     --font-titulo: 'Alkatra', cursive;
     --font-sub: 'Arapey', serif;
     --font-p: 'Inter', sans-serif;
 }
 
 html, body {
-    font-family: sans-serif; 
+    font-family: sans-serif;
 }
 /* página inicial */
 nav {
-    height: 56px;
+    height: 60px;
     background-color: var(--cor0);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.295);
     display: flex;
@@ -30,15 +31,16 @@ nav {
 nav > a {
     text-decoration: none;
     color: var(--cor4);
-    margin: 20px 20px 0px 20px;
+    margin: 20px;
 }
 nav > a:hover {
     background-color: var(--cor3);
+    margin: 20px;
+
 }
 header {
-    text-align: center;
-    height: 70VH;
-    width: 98vw;
+    height: 100vh;
+    width: 98.75vw;
     background-color: var(--cor1);
     background-image: url("/img/salada-fundo.png");
     background-repeat: no-repeat;
@@ -46,45 +48,88 @@ header {
     background-position: center;
     display: flex;
     flex-direction: column;
+    justify-items: center;
 }
 section.titulos {
-    /* background-color: #734A32; */
-    margin-top: calc(10vh); /*metade da altura do header*/
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     gap: 5vh;
 }
 h1 {
+    text-align: center;
     font-family: var(--font-titulo);
-    font-size: 2.7rem;
+    font-size: 2.7em;
     text-transform: uppercase;
     text-shadow: 0px 4px 4px #0000004b;
 }
 h2 {
+    text-align: center;
     font-family: var(--font-sub);
-    font-size: 2.8rem;
+    font-size: 2.8em;
     font-weight: lighter;
 }
 section.subtitulos {
-    margin-top: 15vh;
-    width: 45vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-self: center;
-    /* gap: 2vw; */
+    margin-top: 70px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 220px 220px;
+    grid-template-rows: 70px 70px;
+    grid-template-areas: 
+        "p_um p_dois"
+        "button_um button_dois"
+    ;
+    gap: 45px 140px;
 }
-div.daSalada {
+/* p dos substítulos */
+p.subtitulo {
     font-family: var(--font-p);
-    font-size: 1.5rem;
+    font-size: 20px;
+    font-weight: bolder;
+    height: fit-content;
+    border-top: solid 1px var(--cor6);
+    padding-top: 15px;
+}
+.t_um {
+    grid-area: p_um;
     text-align: right;
-    width: 15vw;
+    justify-self: end;
 }
-div.doIngrediente  {
-    font-family: var(--font-p);
-    font-size: 1.5rem;
+.t_dois {
+    grid-area: p_dois;
     text-align: left;
-    width: 15vw;
+    justify-self: start;
+}
+/* button dos subtitulos */
+.button_opcoes {
+    background-color: var(--cor3);
+    border-radius: 17px;
+    width: 221px;
+    height: 49px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+    border: none;
+    cursor: pointer;
+}
+button.saladas {
+    background-color: var(--cor6);
+    grid-area: button_um;
+    justify-self: end;
+}
+button.saladas > a {
+    color: var(--cor0);
+}
+button.ingredientes {
+    background-color: var(--cor0);
+    grid-area: button_dois;
+    justify-self: start;
+}
+button.ingrediente > a {
+    color: var(--cor6);
+}
+.button_opcoes > a {
+    font-family: var(--font-sub);
+    font-size: 25px;
+    text-decoration: none;
 }
 main {
     /* border: solid 1px rgba(0,0,0,0.1); */
