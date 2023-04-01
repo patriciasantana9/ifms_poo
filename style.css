@@ -132,8 +132,6 @@ button.ingrediente > a {
     text-decoration: none;
 }
 main {
-    /* border: solid 1px rgba(0,0,0,0.1); */
-    /* background-color: var(--cor2); */
     margin: auto;
     width: 70vw;
     height: 800px;
@@ -172,3 +170,30 @@ p {
     margin-left: 1rem;
     font-family: var(--font-p);
 }
+/* pagina secundaria */
+header.header-secundario {
+    height: 300px;
+}
+main#tudo {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 300px 100px;
+    grid-template-areas: "prateleiras cesta";
+
+}
+section#prateleiras {
+    grid-area: prateleiras;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+section#cesta {
+    grid-area: cesta;
+}
+h3 {
+    text-align: center;
+}
+/* section#container-saladas, section#container-ingredientes {
+    margin-bottom: 25px;
+} */
