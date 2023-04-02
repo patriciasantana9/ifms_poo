@@ -75,7 +75,7 @@ section.subtitulos {
     display: grid;
     grid-template-columns: 220px 220px;
     grid-template-rows: 70px 70px;
-    grid-template-areas: 
+    grid-template-areas:
         "p_um p_dois"
         "button_um button_dois"
     ;
@@ -131,18 +131,28 @@ button.ingredientes > a {
     font-size: 25px;
     text-decoration: none;
 }
-main {
+main#principal {
     margin: auto;
     width: 70vw;
     height: 800px;
 }
 section.textos {
-    /* background-color: #6e8c03; */
     height: auto;
     width: 60vw;
     padding-top: 4rem;
     margin: auto;
     text-align: justify;
+}
+#container-saladas, #container-ingredientes {
+    /* width: 80vw; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-self: flex-start;
+    justify-content: left;
+    justify-self: flex-start;
+    justify-items: flex-start;
 }
 p {
     font-family: var(--font-p);
@@ -154,10 +164,10 @@ p {
     padding: 2rem;
     align-items: center;
     display: flex;
-    height: 50px;
-    width: 350px;
+    height: 40px;
+    width: 310px;
     border-radius: 46px 0px;
-    margin: 8px auto;
+    margin: 15px 8px;
 }
 .ingrediente:hover, .salada:hover {
     background-color: var(--cor2);
@@ -175,25 +185,38 @@ header.header-secundario {
     height: 300px;
 }
 main#tudo {
+    width: 90vw;
     margin: auto;
     display: grid;
-    grid-template-columns: 300px 100px;
+    grid-template-columns: 78vw 200px;
     grid-template-areas: "prateleiras cesta";
 
 }
 section#prateleiras {
     grid-area: prateleiras;
-    margin: 50px auto;
+    margin: 10px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    justify-content: center;
+    gap: 10px;
 }
 section#cesta {
     grid-area: cesta;
+    margin: 10px;
+    padding: 30px;
+    box-shadow: 1px 2px 4px 0px #c9c8c84f;
+    /* background-color: var(--cor2);*/
+    border-radius: 17px;
 }
 h3 {
     text-align: center;
+    font-family: var(--font-sub);
+    font-size: 1.6rem;
+    margin-top: 20px;
 }
-/* section#container-saladas, section#container-ingredientes {
-    margin-bottom: 25px;
-} */
+h4 {
+    text-align: center;
+    font-family: var(--font-sub);
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
