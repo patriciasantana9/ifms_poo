@@ -1,184 +1,48 @@
-let ingredientes = [        //array
-    {                       //objeto
-        nome: 'Abobóra',        
-        valorAdicional: 0.5,
-        img: 'abobora.png'
-    },
-    {                       
-        nome: 'Abobrinha',        
-        valorAdicional: 0.5,
-        img: 'abobrinha.png'
-    },
-    {                       
-        nome: 'Acelga',        
-        valorAdicional: 0.5,
-        img: 'acelga.png'
-    },
-    {                       
-        nome: 'Agrião',        
-        valorAdicional: 0.5,
-        img: 'agriao.png'
-    },
-    {                       
-        nome: 'Alface americana',        
-        valorAdicional: 0.5,
-        img: 'alface-americana.png'
-    },
-    {                       
-        nome: 'Alface crespa',        
-        valorAdicional: 0.5,
-        img: 'alface-crespa.png'
-    },
-    {
-        nome: 'Batata doce',
-        valorAdicional: 0.5,
-        img: 'batata-doce.png' 
-    },
-    {
-        nome: 'Batata palha',
-        valorAdicional: 0.5,
-        img: 'batata-palha.png' 
-    },
-    {
-        nome: 'Berinjela',
-        valorAdicional: 0.5,
-        img: 'berinjela.png' 
-    },
-    {
-        nome: 'Brócolis',
-        valorAdicional: 0.5,
-        img: 'brocolis.png'  
-    },
-    {
-        nome: 'Beterraba',
-        valorAdicional: 0.5,
-        img: 'beterraba.png'  
-    },
-    {
-        nome: 'Camarão',
-        valorAdicional: 0.5,
-        img: 'camarao.png'  
-    },
-    {
-        nome: 'carne',
-        valorAdicional: 0.5,
-        img: 'carne.png' 
-    },
-    {
-        nome: 'cebola-roxa',
-        valorAdicional: 0.5,
-        img: 'cebola-roxa.png' 
-    },
-    {
-        nome: 'cebolinha',
-        valorAdicional: 0.5,
-        img: 'cebolinha.png' 
-    },
-    {
-        nome: 'cenoura',
-        valorAdicional: 0.5,
-        img: 'cenoura.png' 
-    },
-    {
-        nome: 'chuchu',
-        valorAdicional: 0.5,
-        img: 'chuchu.png'  
-    },
-    {
-        nome: 'couve-flor',
-        valorAdicional: 0.5,
-        img: 'couve-flor.png'  
-    },
-    {
-        nome: 'croutonn',
-        valorAdicional: 0.5,
-        img: 'croutonn.png'
-    },
-    {
-        nome: 'espinafre',
-        valorAdicional: 0.5,
-        img: 'espinafre.png'
-    },
-    {
-        nome: 'frango',
-        valorAdicional: 0.5,
-        img: 'frango.png'
-    },
-    {
-        nome: 'limão',
-        valorAdicional: 0.5,
-        img: 'limao.png'
-    },
-    {
-        nome: 'molho-branco',
-        valorAdicional: 0.5,
-        img: 'molho-branco.png'
-    },
-    {
-        nome: 'molho-mostarda',
-        valorAdicional: 0.5,
-        img: 'molho-mostarda.png'
-    },
-    {
-        nome: 'molho-pimenta',
-        valorAdicional: 0.5,
-        img: 'molho-pimenta.png'
-    },
-    {
-        nome: 'molho-vermelho',
-        valorAdicional: 0.5,
-        img: 'molho-vermelho.png'
-    },
-    {
-        nome: 'pepino',
-        valorAdicional: 0.5,
-        img: 'pepino.png'
-    },
-    {
-        nome: 'queijo-ralado',
-        valorAdicional: 0.5,
-        img: 'queijo-ralado.png'
-    },
-    {
-        nome: 'repolho',
-        valorAdicional: 0.5,
-        img: 'repolho.png'
-    },
-    {
-        nome: 'repolho-roxo',
-        valorAdicional: 0.5,
-        img: 'repolho-roxo.png'
-    },
-    {
-        nome: 'rúcula',
-        valorAdicional: 0.5,
-        img: 'rucula.png'
-    },
-    {
-        nome: 'salmão',
-        valorAdicional: 0.5,
-        img: 'salmao.png'
-    },
-    {
-        nome: 'salsinha',
-        valorAdicional: 0.5,
-        img: 'salsinha.png'
-    },
-    {
-        nome: 'tilápia',
-        valorAdicional: 0.5,
-        img: 'tilapia.png'
-    },
-    {
-        nome: 'Tomate',
-        valorAdicional: 0.5,
-        img: 'tomate.png' 
-    },
-    {
-        nome: 'tomate-cereja',
-        valorAdicional: 0.5,
-        img: 'tomate-cereja.png'
-    },
+function ingrediente (nome, valorAdicional, img) {
+    return {
+        nome: nome,
+        valorAdicional: valorAdicional,
+        img: img
+    }
+}
+
+const ingredientes = [
+    ingrediente('Abóbora', 0.5, 'abobora.png'),
+    ingrediente('Abobrinha', 0.5, 'abobrinha.png'),
+    ingrediente('Acelga', 0.5, 'acelga.png'),
+    ingrediente('Agrião', 0.5, 'agriao.png'),
+    ingrediente('Alface americana', 0.5, 'alface-americana.png'),
+    ingrediente('Alface crespa', 0.5, 'alface-crespa.png'),
+    ingrediente('bataba doce', 0.5, 'batata-doce.png'),
+    ingrediente('batata palha', 0.5, 'batata-palha.png'),
+    ingrediente('berinjela', 0.5, 'berinjela.png'),
+    ingrediente('brocólis', 0.5, 'brocolis.png'),
+    ingrediente('beterraba', 0.5, 'beterraba.png'),
+    ingrediente('camarão', 0.5, 'camarao.png'),
+    ingrediente('carne', 0.5, 'carne.png'),
+    ingrediente('cebola-roxa', 0.5, 'cebola-roxa.png'),
+    ingrediente('cebolinha', 0.5, 'cebolinha.png'),
+    ingrediente('cenoura', 0.5, 'cenoura.png'),
+    ingrediente('chuchu', 0.5, 'chuchu.png'),
+    ingrediente('couve-flor', 0.5, 'couve-flor.png'),
+    ingrediente('croutonn', 0.5, 'croutonn.png'),
+    ingrediente('espinafre', 0.5, 'espinafre.png'),
+    ingrediente('frango', 0.5, 'frango.png'),
+    ingrediente('limão', 0.5, 'limao.png'),
+    ingrediente('molho-branco', 0.5, 'molho-branco.png'),
+    ingrediente('molho-mostarda', 0.5, 'molho-mostarda.png'),
+    ingrediente('molho-pimenta', 0.5, 'molho-pimenta.png'),
+    ingrediente('molho-vermelho', 0.5, 'molho-vermelho.png'),
+    ingrediente('pepino', 0.5, 'pepino.png'),
+    ingrediente('queijo-ralado', 0.5, 'queijo-ralado.png'),
+    ingrediente('repolho', 0.5, 'repolho.png'),
+    ingrediente('repolho-roxo', 0.5, 'repolho-roxo.png'),
+    ingrediente('rúcula', 0.5, 'rucula.png'),
+    ingrediente('salmão', 0.5, 'salmao.png'),
+    ingrediente('salsinha', 0.5, 'salsinha.png'),
+    ingrediente('tilápia', 0.5, 'tilapia.png'),
+    ingrediente('tomate', 0.5, 'tomate.png'),
+    ingrediente('tomate-cereja', 0.5, 'tomate-cereja.png')
 ]
 
 export default ingredientes; //somente o vetor
