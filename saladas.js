@@ -42,5 +42,5 @@ let saladas = [
         img: 'prato7.png'
     },
 ]
-
+// console.log(saladas)
 export default saladas;
