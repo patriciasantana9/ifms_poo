@@ -10,7 +10,7 @@ let containerIngredientes = document.querySelector('#container-ingredientes');
 for (let ingrediente of ingredientesCap) {
     let textoHTML = `
     <div class="ingrediente">
-        <img src="img/${ingrediente.img}">     
+        <img src="/css/img/${ingrediente.img}">     
         <p class="nome-ingrediente">${ingrediente.nome}</p>
     </div>
     `;

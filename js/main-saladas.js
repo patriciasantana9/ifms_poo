@@ -9,7 +9,7 @@ let containerSaladas = document.getElementById('container-saladas');
 for (let salada of saladasCap) {
     let saladaHTML = `
     <div class="salada">
-        <img src="img/${salada.img}">
+        <img src="/css/img/${salada.img}">
         <p class="ingrediente-salada">${salada.ingredientes}</p>
     </div>
     `;
