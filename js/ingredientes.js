@@ -1,3 +1,6 @@
+//definir os argumentos e seus valores
+
+
 function ingrediente (nome, valorAdicional, img) {
     return {
         nome: nome,
