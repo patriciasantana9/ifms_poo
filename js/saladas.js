@@ -1,3 +1,5 @@
+//definir os argumentos e seus valores
+
 function salada(nome, ingredientes, valor, img) {
     return {
         nome: nome,

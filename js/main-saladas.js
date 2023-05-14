@@ -1,8 +1,9 @@
 import modificador from "./modificador.js";
 import saladas from  "./saladas.js";
 
-//exibir saladas
+//impressão dos valores dos argumentos 
 
+//exibir saladas
 let saladasCap = modificador.capitalizarNovo(saladas, 'ingredientes');
 
 let containerSaladas = document.getElementById('container-saladas');

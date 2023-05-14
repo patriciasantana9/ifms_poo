@@ -1,3 +1,5 @@
+/corrigir, nos dois objetos, a capitalização dos textos e ordenar os itens alfabeticamente
+
 //capitalizar títulos?
 function fnCapitalizarNovo(colecao, atributo) {     //coleção é o arquivo em que está o atributo; atributo é o atributo do obj.
     if (colecao.length > 0) {
